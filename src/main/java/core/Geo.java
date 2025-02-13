@@ -9,15 +9,9 @@ import java.util.Map;
 @Getter
 @Setter
 @Builder(toBuilder = true)
-public class User {
+public class Geo {
 
-    private Integer id;
-    private String name;
-    private String username;
-    private String email;
-    private Address address;
-    private String phone;
-    private String website;
-    private Company company;
+    private String lat;
+    private String lng;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 }
