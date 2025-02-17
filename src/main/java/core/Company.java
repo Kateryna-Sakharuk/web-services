@@ -1,10 +1,15 @@
 package core;
 
-import lombok.Data;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.HashMap;
 import java.util.Map;
-@Data
+
+@Getter
+@Setter
+@Builder(toBuilder = true)
 public class Company {
     private String name;
     private String catchPhrase;
