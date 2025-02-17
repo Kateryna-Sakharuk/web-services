@@ -1,46 +1,31 @@
-import org.apache.http.HttpStatus;
+import io.restassured.response.Response;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import requestSpecification.UserSpecification;
 
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
-
-public class HttpTest {
-    String BASE_URI= "https://jsonplaceholder.typicode.com/users";
-
+public class HttpTest extends BaseApiTest {
+private final UserSpecification createNewUser = new UserSpecification();
     @Test
     public void checkStatusCodeTest() {
-        given()
-                .queryParam("id", 1)
-                .when()
-                .get(BASE_URI)
-                .then()
-                .statusCode(HttpStatus.SC_OK);
+        Response response = createNewUser.getUser("1");
     }
-
 
     @Test
     public void checkResponseContentTest() {
-        given()
-                .when()
-                .get(BASE_URI)
-                .then()
-                .log()
-                .body()
-                .assertThat()
-                .statusCode(HttpStatus.SC_OK)
-                .body("size()", equalTo(10));
+        Response response = createNewUser.getUser("");
+        int usersCount = response.jsonPath().getList("$").size();
+
+        Assert.assertEquals(usersCount, 10, "Content of the response body is NOT the array of 10 users");
+
     }
 
     @Test
     public void checkResponseHeaderTest() {
-        given()
-                .when()
-                .get(BASE_URI)
-                .then()
-                .log()
-                .headers()
-                .assertThat()
-                .statusCode(HttpStatus.SC_OK)
-                .header("Content-type", equalTo("application/json; charset=utf-8"));
+        Response response = createNewUser.getUser("");
+
+        Assert.assertTrue(response.getHeaders().hasHeaderWithName("Content-Type"),
+                "Content-Type header is missing from the received response");
+        Assert.assertEquals(response.getHeader("Content-Type"), "application/json; charset=utf-8",
+                "Invalid Content-Type header value");
     }
 }
