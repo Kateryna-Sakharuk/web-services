@@ -1,4 +1,9 @@
-package core;
+package models.testDataGenerator;
+
+import models.user.Address;
+import models.user.Company;
+import models.user.Geo;
+import models.user.User;
 
 public class TestDataGenerator {
     public static User createNewUser() {
@@ -7,13 +12,13 @@ public class TestDataGenerator {
                 .suite("Apt 4B")
                 .city("New York")
                 .zipcode("10001")
-                .geo(new Geo.GeoBuilder()
+                .geo(Geo.builder()
                         .lat("40.7128")
                         .lng("74.0060")
                         .build())
                 .build();
 
-        Company company = new Company.CompanyBuilder()
+        Company company = Company.builder()
                 .name("Tech Corp")
                 .catchPhrase("Innovating the Future")
                 .bs("Tech business solutions")
@@ -30,5 +35,4 @@ public class TestDataGenerator {
                 .company(company)
                 .build();
     }
-
 }

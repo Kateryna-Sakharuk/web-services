@@ -1,18 +1,21 @@
+package restassured.api.test.userApiTest;
+
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import requestSpecification.UserSpecification;
+import requestSpecification.Specification;
+import restassured.api.test.BaseApiTest;
 
 public class HttpTest extends BaseApiTest {
-private final UserSpecification createNewUser = new UserSpecification();
+private final Specification createNewUser = new Specification();
     @Test
     public void checkStatusCodeTest() {
-        Response response = createNewUser.getUser("1");
+        Response response = createNewUser.getResource("1");
     }
 
     @Test
     public void checkResponseContentTest() {
-        Response response = createNewUser.getUser("");
+        Response response = createNewUser.getResource("");
         int usersCount = response.jsonPath().getList("$").size();
 
         Assert.assertEquals(usersCount, 10, "Content of the response body is NOT the array of 10 users");
@@ -21,7 +24,7 @@ private final UserSpecification createNewUser = new UserSpecification();
 
     @Test
     public void checkResponseHeaderTest() {
-        Response response = createNewUser.getUser("");
+        Response response = createNewUser.getResource("");
 
         Assert.assertTrue(response.getHeaders().hasHeaderWithName("Content-Type"),
                 "Content-Type header is missing from the received response");

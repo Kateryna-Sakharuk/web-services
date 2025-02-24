@@ -2,7 +2,7 @@
 <suite name="User API Tests Suite" parallel="methods" thread-count="3">
     <test name="User API Tests">
         <classes>
-            <class name="HttpTest"/>
+            <class name="restassured.api.test.userApiTest.HttpTest"/>
         </classes>
     </test>
 </suite>
