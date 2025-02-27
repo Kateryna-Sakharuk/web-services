@@ -10,15 +10,13 @@ import org.testng.annotations.Parameters;
 import properties.PropertyReader;
 
 public class BaseApiTest {
-    protected PropertyReader propertyReader;
     @BeforeClass
     @Parameters("testData")
     public void setUp(String testData) {
-        propertyReader =new PropertyReader(testData);
-        RestAssured.baseURI = propertyReader.getProperty("base.uri");
-        RestAssured.basePath = propertyReader.getProperty("base.path");
+        PropertyReader.loadProperties(testData);
+        RestAssured.baseURI = PropertyReader.getProperty("base.uri");
+        RestAssured.basePath = PropertyReader.getProperty("base.path");
         RestAssured.defaultParser = Parser.JSON;
-
         RestAssured.requestSpecification = new RequestSpecBuilder()
                 .log(LogDetail.ALL)
                 .setContentType(ContentType.JSON)

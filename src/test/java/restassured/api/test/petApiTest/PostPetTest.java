@@ -1,16 +1,25 @@
 package restassured.api.test.petApiTest;
 
-import models.testDataGenerator.PetTestDataGenerator;
 import models.pet.Pet;
+import models.testDataGenerator.PetTestDataGenerator;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import requestSpecification.Specification;
 import restassured.api.test.BaseApiTest;
 
 public class PostPetTest extends BaseApiTest {
-    private final Specification createNewPet = new Specification();
-    private final Pet newPet = PetTestDataGenerator.createNewPet();
-    private final Pet minDataPet = PetTestDataGenerator.getGeneratedPetWithMinimumData();
-    private final Pet fullDataPet = PetTestDataGenerator.getGeneratedPetWithFullData();
+    private Specification createNewPet;
+    private Pet newPet;
+    private Pet minDataPet;
+    private Pet fullDataPet;
+
+    @BeforeClass
+    public void initTestData() {
+        createNewPet = new Specification();
+        newPet = PetTestDataGenerator.createNewPet();
+        minDataPet = PetTestDataGenerator.getGeneratedPetWithMinimumData();
+        fullDataPet = PetTestDataGenerator.getGeneratedPetWithFullData();
+    }
 
     @Test
     public void createCreateNewPet() {

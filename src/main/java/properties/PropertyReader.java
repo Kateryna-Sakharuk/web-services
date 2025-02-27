@@ -9,12 +9,14 @@ import java.util.Properties;
 
 public class PropertyReader {
     private static final Properties properties = new Properties();
+
     public PropertyReader(String testData) {
         loadProperties(testData);
     }
-@BeforeSuite
-@Parameters("testData")
-    private static void loadProperties(String testData) {
+
+    @BeforeSuite
+    @Parameters("testData")
+    public static void loadProperties(String testData) {
         String filePath = System.getProperty("user.dir") + "/src/test/resources/properties/" + testData;
         try (FileInputStream inputStream = new FileInputStream(filePath)) {
             properties.load(inputStream);

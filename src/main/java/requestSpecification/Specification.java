@@ -1,23 +1,20 @@
 package requestSpecification;
 
 import io.restassured.response.Response;
-import org.apache.http.HttpStatus;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.anyOf;
-import static org.hamcrest.Matchers.is;
 
 public class Specification {
-    static final Logger logger = LogManager.getLogger("");
+    private static final Logger logger = LogManager.getLogger(Specification.class);
 
     public Response getResource(String resourceId) {
         Response response = given()
                 .when()
                 .get(resourceId.isEmpty() ? "" : "/" + resourceId)
                 .then()
-                .statusCode(anyOf(is(HttpStatus.SC_OK), is(HttpStatus.SC_NOT_FOUND)))
+                .log().all()
                 .extract()
                 .response();
         logResponse(response);
@@ -30,7 +27,7 @@ public class Specification {
                 .body(resource)
                 .post()
                 .then()
-                .statusCode(HttpStatus.SC_OK)
+                .log().all()
                 .extract()
                 .response();
         logResponse(response);
@@ -43,7 +40,7 @@ public class Specification {
                 .body(resource)
                 .put()
                 .then()
-                .statusCode(HttpStatus.SC_OK)
+                .log().all()
                 .extract()
                 .response();
         logResponse(response);
@@ -55,7 +52,7 @@ public class Specification {
                 .when()
                 .delete(resourceId)
                 .then()
-                .statusCode(HttpStatus.SC_OK)
+                .log().all()
                 .extract()
                 .response();
         logResponse(response);

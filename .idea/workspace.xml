@@ -5,32 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="677389f8-bd62-47aa-ac7e-c7398372210e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/pet/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/pet/Pet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/pet/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/pet/Tag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/testDataGenerator/PetTestDataGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/properties/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/restassured/api/test/petApiTest/PetCrudTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/restassured/api/test/petApiTest/PostPetTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/properties/petTestData.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/suits/pet-suite.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/suits/user-suite.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/restassured/api/test/petApiTest/NegativeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/data/json/incorrect.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/suits/pet-negative-suite.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/user/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/user/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/Geo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/user/Geo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/TestDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/testDataGenerator/TestDataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/testDataGenerator/PetTestDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/testDataGenerator/PetTestDataGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/properties/PropertyReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/properties/PropertyReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/requestSpecification/UserSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestSpecification/Specification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BaseApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/restassured/api/test/BaseApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CreateUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/restassured/api/test/userApiTest/CreateUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HttpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/restassured/api/test/userApiTest/HttpTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/properties/TestData.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/properties/userTestData.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/requestSpecification/Specification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requestSpecification/Specification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/restassured/api/test/BaseApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/restassured/api/test/BaseApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/restassured/api/test/petApiTest/PetCrudTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/restassured/api/test/petApiTest/PetCrudTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/restassured/api/test/petApiTest/PostPetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/restassured/api/test/petApiTest/PostPetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/properties/petTestData.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/properties/petTestData.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/suits/pet-suite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/suits/pet-suite.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,10 +93,57 @@
       <command value="mvn compile" />
       <command value="mvn package" />
       <command value="mvn install" />
+      <command value="mvn test" />
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.UserApiTestSuites">
+  <component name="RunManager" selected="TestNG.NegativePetSuite">
+    <configuration name="NegativePetSuite" type="TestNG" temporary="true">
+      <module name="web-services" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="restassured.api.test.petApiTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/suits/pet-negative-suite.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NegativeTest.createPetWithInvalidData" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="web-services" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="restassured.api.test.petApiTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="restassured.api.test.petApiTest" />
+      <option name="MAIN_CLASS_NAME" value="restassured.api.test.petApiTest.NegativeTest" />
+      <option name="METHOD_NAME" value="createPetWithInvalidData" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PetApiTestSuite" type="TestNG" temporary="true">
       <module name="web-services" />
       <shortenClasspath name="NONE" />
@@ -151,33 +186,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PostPetTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="web-services" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="restassured.api.test.petApiTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="restassured.api.test.petApiTest" />
-      <option name="MAIN_CLASS_NAME" value="restassured.api.test.petApiTest.PostPetTest" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UserApiTestSuites" type="TestNG" temporary="true">
       <module name="web-services" />
       <shortenClasspath name="NONE" />
@@ -204,16 +212,18 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="TestNG.NegativeTest.createPetWithInvalidData" />
       <item itemvalue="TestNG.PetCrudTest" />
-      <item itemvalue="TestNG.PostPetTest" />
+      <item itemvalue="TestNG.NegativePetSuite" />
       <item itemvalue="TestNG.PetApiTestSuite" />
       <item itemvalue="TestNG.UserApiTestSuites" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UserApiTestSuites" />
+        <item itemvalue="TestNG.NegativePetSuite" />
         <item itemvalue="TestNG.PetApiTestSuite" />
-        <item itemvalue="TestNG.PostPetTest" />
+        <item itemvalue="TestNG.NegativeTest.createPetWithInvalidData" />
+        <item itemvalue="TestNG.UserApiTestSuites" />
         <item itemvalue="TestNG.PetCrudTest" />
       </list>
     </recent_temporary>
@@ -239,5 +249,46 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/properties/PropertyReader.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/restassured/api/test/petApiTest/NegativeTest.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/restassured/api/test/petApiTest/NegativeTest.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/restassured/api/test/petApiTest/NegativeTest.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/restassured/api/test/BaseApiTest.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/restassured/api/test/BaseApiTest.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/restassured/api/test/BaseApiTest.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
