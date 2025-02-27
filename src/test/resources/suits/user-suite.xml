@@ -1,0 +1,8 @@
+<suite name="UserApiTestSuite">
+    <parameter name="testData" value="userTestData.properties"/>
+    <test name="CheckResponseTests">
+        <classes>
+            <class name="restassured.api.test.userApiTest.HttpTest"/>
+        </classes>
+    </test>
+</suite>

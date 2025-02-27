@@ -1,0 +1,13 @@
+<suite name="PetApiTestSuite">
+    <parameter name="testData" value="petTestData.properties"/>
+    <test name="Test CRUD operations">
+        <classes>
+            <class name="restassured.api.test.petApiTest.PetCrudTest"/>
+        </classes>
+    </test>
+    <test name="Test POST method">
+        <classes>
+            <class name="restassured.api.test.petApiTest.PostPetTest"/>
+        </classes>
+    </test>
+</suite>
