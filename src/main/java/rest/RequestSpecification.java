@@ -1,4 +1,4 @@
-package requestSpecification;
+package rest;
 
 import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
@@ -6,8 +6,12 @@ import org.apache.logging.log4j.Logger;
 
 import static io.restassured.RestAssured.given;
 
-public class Specification {
-    private static final Logger logger = LogManager.getLogger(Specification.class);
+public class RequestSpecification {
+    private static final Logger logger = LogManager.getLogger(RequestSpecification.class);
+
+    private String BASE_BOOKS_PATH = "%s/books";
+    private String BASE_BOOKS_ID_PATH = "%s/books/%s";
+    private String POST_BOOKS = "%s/books/save";
 
     public Response getResource(String resourceId) {
         Response response = given()

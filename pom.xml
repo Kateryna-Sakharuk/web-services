@@ -110,6 +110,31 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+            <!-- Cucumber JVM -->
+            <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-java</artifactId>
+                <version>1.2.6</version> <!-- Використовуйте актуальну версію -->
+                <scope>test</scope>
+            </dependency>
+
+            <!-- Cucumber TestNG -->
+            <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-testng</artifactId>
+                <version>1.2.6</version> <!-- Використовуйте актуальну версію -->
+                <scope>test</scope>
+            </dependency>
+
+            <!-- Cucumber Spring (якщо використовуєте Spring) -->
+            <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-spring</artifactId>
+                <version>1.2.6</version>
+                <scope>test</scope>
+            </dependency>
+
     </dependencies>
 
     <build>

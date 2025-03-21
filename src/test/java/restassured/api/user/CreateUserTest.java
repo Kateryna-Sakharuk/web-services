@@ -1,14 +1,14 @@
-package restassured.api.test.userApiTest;
+package restassured.api.user;
 
-import models.testDataGenerator.TestDataGenerator;
+import models.datagenerator.TestDataGenerator;
 import models.user.User;
 import org.testng.annotations.Test;
-import requestSpecification.Specification;
-import restassured.api.test.BaseApiTest;
+import rest.RequestSpecification;
+import restassured.api.BaseApiTest;
 
 
 public class CreateUserTest extends BaseApiTest {
-    private final Specification createNewUser = new Specification();
+    private final RequestSpecification createNewUser = new RequestSpecification();
     private final User newUser = TestDataGenerator.createNewUser();
 
     @Test

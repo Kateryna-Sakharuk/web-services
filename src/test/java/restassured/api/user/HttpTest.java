@@ -1,13 +1,13 @@
-package restassured.api.test.userApiTest;
+package restassured.api.user;
 
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import requestSpecification.Specification;
-import restassured.api.test.BaseApiTest;
+import rest.RequestSpecification;
+import restassured.api.BaseApiTest;
 
 public class HttpTest extends BaseApiTest {
-private final Specification createNewUser = new Specification();
+private final RequestSpecification createNewUser = new RequestSpecification();
     @Test
     public void checkStatusCodeTest() {
         Response response = createNewUser.getResource("1");

@@ -2,7 +2,7 @@
     <parameter name="testData" value="petTestData.properties"/>
     <test name="CrudPetStore API Tests">
         <classes>
-            <class name="restassured.api.test.petApiTest.NegativeTest"/>
+            <class name="restassured.api.pet.NegativeTest"/>
         </classes>
     </test>
 

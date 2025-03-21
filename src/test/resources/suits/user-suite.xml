@@ -2,7 +2,7 @@
     <parameter name="testData" value="userTestData.properties"/>
     <test name="CheckResponseTests">
         <classes>
-            <class name="restassured.api.test.userApiTest.HttpTest"/>
+            <class name="restassured.api.user.HttpTest"/>
         </classes>
     </test>
 </suite>

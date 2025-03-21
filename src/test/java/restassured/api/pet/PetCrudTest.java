@@ -1,24 +1,24 @@
-package restassured.api.test.petApiTest;
+package restassured.api.pet;
 
 import io.restassured.response.Response;
 import models.pet.Pet;
-import models.testDataGenerator.PetTestDataGenerator;
+import models.datagenerator.PetTestDataGenerator;
 import org.apache.http.HttpStatus;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import requestSpecification.Specification;
-import restassured.api.test.BaseApiTest;
+import rest.RequestSpecification;
+import restassured.api.BaseApiTest;
 
 public class PetCrudTest extends BaseApiTest {
-    private Specification petApiClient;
+    private RequestSpecification petApiClient;
     private Pet newPet;
     private Pet updatedPet;
     private String petId;
 
     @BeforeClass
     public void setUpTestData() {
-        petApiClient = new Specification();
+        petApiClient = new RequestSpecification();
         newPet = PetTestDataGenerator.createNewPet();
         updatedPet = PetTestDataGenerator.getGeneratedPetWithFullData();
     }

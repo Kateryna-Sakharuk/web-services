@@ -1,4 +1,4 @@
-package models.testDataGenerator;
+package models.datagenerator;
 
 import models.pet.Category;
 import models.pet.Pet;

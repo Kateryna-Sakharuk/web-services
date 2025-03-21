@@ -1,4 +1,4 @@
-package models.testDataGenerator;
+package models.datagenerator;
 
 import models.user.Address;
 import models.user.Company;

@@ -1,16 +1,16 @@
-package restassured.api.test.petApiTest;
+package restassured.api.pet;
 
 import io.restassured.response.Response;
 import models.pet.Pet;
-import models.testDataGenerator.PetTestDataGenerator;
+import models.datagenerator.PetTestDataGenerator;
 import org.apache.http.HttpStatus;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import requestSpecification.Specification;
-import restassured.api.test.BaseApiTest;
+import rest.RequestSpecification;
+import restassured.api.BaseApiTest;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -18,14 +18,14 @@ import java.nio.file.Paths;
 
 public class NegativeTest extends BaseApiTest {
     static final Logger logger = LogManager.getLogger(NegativeTest.class);
-    private Specification petApiClient;
+    private RequestSpecification petApiClient;
     private Pet newPet;
     private Pet updatedPet;
     private String petId;
 
     @BeforeClass
     public void setUpTestData() {
-        petApiClient = new Specification();
+        petApiClient = new RequestSpecification();
         newPet = PetTestDataGenerator.createNewPet();
         updatedPet = PetTestDataGenerator.getGeneratedPetWithFullData();
     }
